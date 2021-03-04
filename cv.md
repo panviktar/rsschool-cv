@@ -3,14 +3,14 @@ Zdanovich Viktar
 
 - Belarus, Hrodna 
 - +375298684666
-- [panviktar@gmail.com] [6] 
-- [Github link] [1]
+- [panviktar@gmail.com](mailto:panviktar@gmail.com)
+- [Github link](https://github.com/panviktar)
 
 -----
 Education
 -------------
-- [Belarusian State University of Informatics and Radioelectronics - 2020] [2]
-- [RS School - JS / Front-end - 2021] [3]
+- [BSUIR - 2020](https://www.bsuir.by 'Belarusian State University of Informatics and Radioelectronics')
+- [RS School - JS / Front-end - 2021](https://rs.school/)
 
 ----
 
@@ -34,12 +34,8 @@ Skills
 
 Examples of projects
 ---
- 1. The site of the State Institution "Center for Hygiene and Epidemiology": [link] [4]
- 2. Landing page for media group 15cek: [link] [5]
+ 1. [The site of the State Institution](https://rs.school/ "Center for Hygiene and Epidemiology")
+ 2. [Landing page for media group](http://15cek.com/ '15cek')
  
- [1]:https://github.com/panviktar
- [2]:https://www.bsuir.by
- [3]:https://rs.school/
- [4]:http://ocge-grodno.by/
- [5]:http://15cek.com/
- [6]:mailto:panviktar@gmail.com
+ 
+ 
