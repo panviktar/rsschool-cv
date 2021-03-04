@@ -27,15 +27,15 @@ Skills
   - UX / Figma / Photoshop
 - __Language__:
   - Russian / Belarusian - Native
-  - English - A2
-  - Deutch - A2
-  - Polish - B1
+  - English - _A2_
+  - Deutch - _A2_
+  - Polish - _B1_
 ---
 
 Examples of projects
 ---
  1. The site of the State Institution "Center for Hygiene and Epidemiology": [link] [4]
- 2.  Landing page for media group 15cek: [link] [5]
+ 2. Landing page for media group 15cek: [link] [5]
  
  [1]: https://github.com/panviktar
  [2]: https://www.bsuir.by
