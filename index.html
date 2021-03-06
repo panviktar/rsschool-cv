@@ -25,65 +25,108 @@
         </div>
     </header>
 
-    <main class="page-main">
+
+    <main class="page-main  container">
         <section class="general-info">
             <div class="general-info__photo">
-                <img src="" alt="Zdanovich Viktar">
+                <img src="assets/photo_vz.jpg" alt="Zdanovich Viktar">
             </div>
             <div class="general-info__name">
-                <h1>Zdanovich Viktar</h1>
+                <h1 class="title-h1">Zdanovich Viktar</h1>
                 <p>Web Programmer</p>
             </div>
         </section>
+
+
         <section class="aboutMe">
             <div class="aboutMe__leftColumn">
-                <div class="aboutMe__contact">
-                    <h2>Contact</h2>
-                    <p><strong>Phone</strong><br>
-                    +375 29 86 84 666</p>
-                    <h2>Email</h2>
-                    <p><strong>Email</strong>
-                    panviktar@gmail.com</p>
-                    <h2>Addreses</h2>
-                    <p>Belarus, Hrodna</p>
-                </div>
-                <div class="aboutMe__project">
-                    <h2>Project</h2>
-                    <p><a href="http://ocge-grodno.by/">ocge-grodno.by</a><br>
-                        The site of the State Institution "Center for Hygiene and Epidemiology"</p>
-                    <p><a href="http://15cek.com/">15cek.com</a>
-                        Landing page for media group</p>
-                </div>
+                    <div class="aboutMe__contact  block-wrapper block-wrapper--top">
+                        <h2 class="title-h2">Contact</h2>
+                        <ul>
+                            <li>Phone:<br>
+                                <a href="tel:80298684666"><i class="fas fa-mobile-alt"></i> +375 29 86 84 666</a></li>
+                            <li>Email:<br>
+                                <a href="mailto:panviktar@gmail.com"><i class="fas fa-envelope"></i> panviktar@gmail.com</a></li>
+                            <li>Addreses:<br>
+                                <i class="fas fa-map-marker-alt"></i> Belarus, Hrodna</li>
+                        </ul>
+
+                    </div>
+                    <div class="aboutMe__project  block-wrapper">
+                        <h2 class="title-h2">Project</h2>
+                        <ul>
+                            <li>Web site<br>
+                                <a href="http://ocge-grodno.by/"> <i class="fas fa-globe"></i> State Institution "Center for Hygiene and Epidemiology"</a></li>
+                            <li>Landing <br>
+                                <a href="http://15cek.com/"> <i class="fas fa-globe"></i> Media group 15cek</a></li>
+                        </ul>
+
+                    </div>
+
+
             </div>
             <div class="aboutMe__rightColumn">
-                <div class="aboutMe__profile">
+                <div class="aboutMe__profile  block-wrapper block-wrapper--top">
+                    <h2 class="title-h2">Profile</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, ipsum, quo. Assumenda beatae deserunt dolore doloremque et excepturi facilis, impedit ipsa magnam nemo quod ratione rerum, temporibus totam ullam vero?</p>
                 </div>
-                <div class="aboutMe__education  education">
+                <div class="aboutMe__education  education  block-wrapper">
+                    <h2 class="title-h2">Education</h2>
                     <div class="education__item">
-                        <p>2020</p>
+                        <p class="education__date"> 2020</p>
                         <p><strong>Engineer Programmer</strong><br>
-                            Belarusian State University of Informatics and Radioelectronics</p>
+                           Belarusian State University of Informatics and Radioelectronics</p>
                     </div>
                     <div class="education__item">
-                        <h2>2021</h2>
+                        <p class="education__date"> 2021</p>
                         <p><strong>Web Programmer</strong> <br>
                             RS School from The Rolling Scopes</p>
                     </div>
                 </div>
-                <div class="aboutMe__skills">
-                    <h2>Skills</h2>
-                    <p><strong>Frontend</strong><i class="fas fa-star  active"></i><i class="fas fa-star active"></i><i class="fas fa-star  active"></i><i class="fas fa-star"></i></p>
-                    <p><strong>CMS</strong><i class="fas fa-star  active"></i><i class="fas fa-star  active"></i><i class="fas fa-star  active"></i><i class="fas fa-star"></i></p>
-                    <p><strong>Soft skills</strong><i class="fas fa-star  active"></i><i class="fas fa-star  active"></i><i class="fas fa-star  active"></i><i class="fas fa-star  active"></i></p>
-                    <p><strong>Language</strong><i class="fas fa-star  active"></i><i class="fas fa-star  active"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <div class="aboutMe__skills  skills  block-wrapper">
+                    <h2 class="title-h2">Skills</h2>
+                         <div class="skills__wrapper">
+                            <div class="skills__item">
+                                <span>Frontend</span>
+                                <div class="skills__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star  not-active"></i>
+                                </div>
+                            </div>
+                            <div class="skills__item">
+                                <span>CMS</span>
+                                <div class="skills__stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star  not-active"></i>
+                                </div>
+                            </div>
+                             <div class="skills__item">
+                                <span>Soft skills</span>
+                                 <div class="skills__stars">
+                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                 </div>
+                             </div>
+                             <div class="skills__item">
+                                <span>Language</span>
+                                 <div class="skills__stars">
+                                 <i class="fas fa-star"></i><i class="fas fa-star active"></i><i class="fas fa-star  not-active"></i><i class="fas fa-star  not-active"></i>
+                                 </div>
+                             </div>
+                         </div>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer class="page-footer">
+        <div class="page-footer__wrapper container">
+            <div class="page-footer__copyright">
+                <span>Viktar Zdanovich <i class="far fa-copyright"></i></span>
+                <a href="https://www.facebook.com/profile.php?id=100008681732620"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.linkedin.com/in/viktar-zdanovich-bb267913a/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.instagram.com/_pan_tadeusz/"><i class="fab fa-linkedin"></i></a>
+            </div>
 
+        </div>
     </footer>
     <script src="https://kit.fontawesome.com/c17ec4797d.js" crossorigin="anonymous"></script>
 </body>
