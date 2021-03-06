@@ -95,6 +95,12 @@ header {
     width: 50%;
     text-align: left;
 }
+
+.page-header__task img{
+    margin-top: 20px;
+    max-width: 70px;
+    height: auto;
+}
 .page-header__name {
     width: 50%;
     text-align: right;
