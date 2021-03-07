@@ -119,10 +119,11 @@ header {
     transition: ease-in .35s;
 }
 
-.page-header b {
+.page-header__name a {
     font-size: 21px;
     margin-right: 10px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 /*--------------------*/
@@ -193,12 +194,17 @@ section {
 
 .general-info__photo {
     width: 30%;
-    margin-right: 30px;
+    margin: 0 30px 0 0;
+    padding: 0;
 }
 
 .general-info__photo  img {
     width: 100%;
     height: auto;
+}
+
+.general-info__photo  figuracaption {
+    display: none;
 }
 
 .general-info__name {
