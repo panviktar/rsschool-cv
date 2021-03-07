@@ -203,10 +203,6 @@ section {
     height: auto;
 }
 
-.general-info__photo  figuracaption {
-    display: none;
-}
-
 .general-info__name {
     font-size: 18px;
     display: flex;
