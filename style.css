@@ -10,11 +10,12 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #363636;
     line-height: 1.5;
     font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 hr {
@@ -65,9 +66,10 @@ img {
 
 .container {
     max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 0 20px;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto;
 }
 
  i {
@@ -85,6 +87,7 @@ header {
     line-height: 70px;
     color: #ffffff;
     margin-bottom: 45px;
+    width: 100%;
 }
 
 .page-header__wrapper {
@@ -132,6 +135,7 @@ header {
 
 main {
     display: block;
+    width: 100%;
 }
 
 section {
