@@ -279,7 +279,11 @@ section {
 }
 
 .skills__item span {
-    width: 100px;
+    width: 50%;
+
+}
+.skills__item .skills__stars {
+
 }
 
 .skills__item .not-active {
