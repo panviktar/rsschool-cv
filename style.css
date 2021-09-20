@@ -19,6 +19,17 @@ body {
     overflow-x: hidden;
 }
 
+.h1-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
 hr {
     box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
