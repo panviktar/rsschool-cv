@@ -229,6 +229,32 @@ section {
 .aboutMe__leftColumn a:hover {
     color: #f2c100;
 }
+.aboutMe__video {
+    text-align: center;
+}
+.aboutMe__video a {
+    color: #000;
+    /*display: block;*/
+    position: relative;
+}
+.aboutMe__video a:after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    left: 0;
+    width: 90%;
+    height: 2px;
+    background: #f2c100;
+    visibility: hidden;
+    transition: ease-in .35s;
+}
+
+.aboutMe__video a:hover:after {
+    transition: ease-in .15s;
+    bottom: -5px;
+    display: block;
+    visibility: visible;
+}
 
 .education__item {
     display: flex;
@@ -329,7 +355,7 @@ section {
 }
 .page-footer__logo i {
    position: absolute;
-    top: 50%;
+    top: 5aboutMe0%;
     transform: translate(0, -50%);
     right: -20px;
 }
