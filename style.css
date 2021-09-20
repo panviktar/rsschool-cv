@@ -89,12 +89,13 @@ header {
     color: #ffffff;
     margin-bottom: 45px;
     width: 100%;
+    -webkit-overflow-x: hidden;
 }
 
 .page-header__wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .page-header__task {
@@ -123,7 +124,7 @@ header {
 
 .nav {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
     padding-right: 20px;
     position: relative;
@@ -148,7 +149,7 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 720px) {
     .burger {
         display: block;
     }
@@ -172,6 +173,9 @@ header {
     .nav-active {
         right: 0;
     }
+    .burger {
+        margin-right: 50px;
+    }
 }
 
 
@@ -194,6 +198,12 @@ section {
     font-weight: bold;
     margin: 0;
     width: 100px;
+}
+
+@media screen and (max-width: 720px) {
+    .title-h1 {
+        font-size: 30px;
+    }
 }
 
 .title-h2 {
@@ -235,7 +245,6 @@ section {
 .block-wrapper {
     padding: 0 30px 30px 30px;
 }
-
 .block-wrapper--top {
     padding-top: 30px;
 }
@@ -258,12 +267,24 @@ section {
     justify-content: center;
     padding: 40px;
 }
-
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+}
 .aboutMe__leftColumn {
     min-width: 30%;
     background-color: #343945;
     color: #ffffff;
     margin-right: 30px;
+}
+@media screen and (max-width: 720px) {
+    .aboutMe {
+        flex-direction: column;
+    }
+
+    .aboutMe__leftColumn {
+        min-width: 100%;
+    }
 }
 
 .aboutMe__leftColumn a {
@@ -324,14 +345,18 @@ section {
 
 .skills__item span {
     width: 50%;
-
-}
-.skills__item .skills__stars {
-
 }
 
 .skills__item .not-active {
     color: #e2e2e2;
+}
+@media screen and (max-width: 720px) {
+    .skills__wrapper {
+        text-align: center;
+    }
+    .skills__item {
+        width: 100%;
+    }
 }
 
 /*--------------------*/
@@ -355,6 +380,21 @@ section {
     justify-content: space-around;
     align-items: center;
     align-content: center;
+}
+
+@media screen and (max-width: 720px) {
+    .page-footer__copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-footer__copyright ul {
+        margin: 0;
+    }
+
+    .page-footer {
+        height: 100%;
+    }
 }
 
 .page-footer__copyright ul  {
@@ -403,10 +443,8 @@ section {
     position: relative;
 }
 .page-footer__logo i {
-   position: absolute;
-    top: 5aboutMe0%;
-    transform: translate(0, -50%);
-    right: -20px;
+    margin-left: 5px;
+    transition: ease-in .35s;
 }
 .page-footer__logo:hover i {
     right: -27px;

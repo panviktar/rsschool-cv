@@ -103,7 +103,7 @@
                     <h2 class="title-h2">Profile</h2>
                     <p>I started my interest in web development 5 years ago. At first, I was engaged in self-education and studied in several online courses, then I entered and successfully graduated from BSUIR with a degree in software engineering. I am looking forward to a qualitative leap in my education and motivation from RS School in 2021</p>
                   <div class="aboutMe__video">
-                    <iframe width="460" height="215" src="https://www.youtube.com/embed/6ync3LD3pmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="400" height="215" src="https://www.youtube.com/embed/6ync3LD3pmE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a target="_blank" href="https://docs.google.com/document/d/1DuRWnB0ebhnSt0iA5zTtKJGHCUAsZoC7Qk-SQf9UQNI/edit">Video transcription <i class="fas fa-long-arrow-alt-right"></i></a></p>
                   </div>
                 </div>
@@ -157,37 +157,43 @@
                     <li>
                       <input type="checkbox" checked>
                       <i></i>
-                      <h2 class="title_block">Binary search tree validation, 5kyu</h2>
+                      <h2 class="title_block">PatternCraft - State, 6kyu</h2>
                       <div class="msg">
                       <pre>
-class Node {
-  constructor(value, left = null, right = null) {
-    this.value = value;
-    this.left = left;
-    this.right = right;
+class SiegeState {
+  constructor () {
+    this.canMove = false;
+    this.damage = 20;
   }
 }
-
-function isBST(node) {
-  const g = inOrder(node);
-  const a = g.next();
-  if (a.done) return true;
-  const b = g.next();
-  if (b.done) return true;
-  var p = b.value;
-  const asc = a.value < p;
-  for (const v of g) {
-    if (asc ? p > v : p < v) return false;
-    p = v;
+class TankState {
+  constructor () {
+    this.canMove = true;
+    this.damage = 5;
   }
-  return true;
 }
-
-function* inOrder(n) {
-  if (n !== null) {
-    yield* inOrder(n.left);
-    yield n.value;
-    yield* inOrder(n.right);
+class Tank {
+  constructor () {
+    this.state = new TankState();
+  }
+  set state (state) {
+    this.state = state;
+  }
+  get canMove () {
+    return this.state.canMove;
+  }
+  get damage () {
+    return this.state.damage;
+  }
+  onSendingMessage (message) {
+    switch (message) {
+      case 'Tank':
+        this.state = new TankState();
+        break;
+      case 'Siege':
+        this.state = new SiegeState();
+        break;
+    }
   }
 }
                       </pre>
