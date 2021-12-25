@@ -2,7 +2,7 @@ Zdanovich Viktar
 -------------
 
 - Belarus, Hrodna 
-- +375298684666
+- +375298684656
 - [panviktar@gmail.com](mailto:panviktar@gmail.com)
 - [Github link](https://github.com/panviktar)
 
@@ -36,6 +36,5 @@ Examples of projects
 ---
  1. [The site of the State Institution](https://rs.school/ "Center for Hygiene and Epidemiology")
  2. [Landing page for media group](http://15cek.com/ '15cek')
- 
  
  
