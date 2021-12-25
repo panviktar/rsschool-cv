@@ -29,7 +29,7 @@ Skills
   - Russian / Belarusian - Native
   - English - _A2_
   - Deutch - _A2_
-  - Polish - _B1_
+  - Polish - _B2_
 ---
 
 Examples of projects
