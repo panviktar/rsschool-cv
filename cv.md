@@ -35,6 +35,6 @@ Skills
 Examples of projects
 ---
  1. [The site of the State Institution](https://rs.school/ "Center for Hygiene and Epidemiology")
- 2. [Landing page for media group](http://15cek.com/ '15cek')
+ 2. [Landing page for media group](http://15cek.com/ '15cek') OMG not active
  
  
