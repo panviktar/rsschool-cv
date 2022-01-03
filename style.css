@@ -109,12 +109,12 @@ header {
     justify-content: space-between;
 }
 
-.page-header__task {
+.page-header__logo {
     width: 120px;
     text-align: left;
 }
 
-.page-header__task img{
+.page-header__logo img{
     margin-top: 20px;
     max-width: 70px;
     height: auto;
@@ -128,8 +128,8 @@ header {
     color: #f2c100;
 }
 
-.page-header__task a:hover i {
-    margin-left: 5px;
+.page-header__logo a:hover i {
+    margin-left: 8px;
     transition: ease-in .35s;
 }
 
@@ -199,7 +199,11 @@ main {
     width: 100%;
 }
 
-section {
+.general-info {
+    display: flex;
+    margin-bottom: 30px;
+}
+.about-me {
     display: flex;
     margin-bottom: 30px;
 }
@@ -217,14 +221,14 @@ section {
     }
 }
 
-.title-h2 {
+.about-me__title {
     font-size: 16px;
     font-weight: bold;
     margin: 15px 0 35px 0;
     position: relative;
 }
 
-.title-h2:after {
+.about-me__title:after {
     position: absolute;
     top: -50%;
     left: -30px;
@@ -235,14 +239,14 @@ section {
     z-index: 5;
 }
 
-.aboutMe__leftColumn .title-h2:after {
+.about-me__left-column .about-me__title:after {
     background: #fff;
 }
-.aboutMe__rightColumn .title-h2:after {
+.about-me__right-column .about-me__title:after {
     background: #000;
 }
 
-.title-h2:before {
+.about-me__title:before {
     position: absolute;
     top: -50%;
     left: -30px;
@@ -278,42 +282,42 @@ section {
     justify-content: center;
     padding: 40px;
 }
-.aboutMe {
+.about-me {
     display: flex;
     flex-direction: row;
 }
-.aboutMe__leftColumn {
+.about-me__left-column {
     min-width: 30%;
     background-color: #343945;
     color: #ffffff;
     margin-right: 30px;
 }
 @media screen and (max-width: 720px) {
-    .aboutMe {
+    .about-me {
         flex-direction: column;
     }
 
-    .aboutMe__leftColumn {
+    .about-me__left-column {
         min-width: 100%;
     }
 }
 
-.aboutMe__leftColumn a {
+.about-me__left-column a {
     color: #fff;
 }
 
-.aboutMe__leftColumn a:hover {
+.about-me__left-column a:hover {
     color: #f2c100;
 }
-.aboutMe__video {
+.about-me__video {
     text-align: center;
 }
-.aboutMe__video a {
+.about-me__video a {
     color: #000;
     /*display: block;*/
     position: relative;
 }
-.aboutMe__video a:after {
+.about-me__video a:after {
     position: absolute;
     content: '';
     bottom: 0px;
@@ -325,22 +329,23 @@ section {
     transition: ease-in .35s;
 }
 
-.aboutMe__video a:hover:after {
+.about-me__video a:hover:after {
     transition: ease-in .15s;
     bottom: -5px;
     display: block;
     visibility: visible;
 }
 
-.education__item {
-    display: flex;
-
+.about-me__list hr {
+    opacity: .3;
+}
+.about-me__item a {
+    text-decoration: underline;
 }
 
-.education__date {
-    font-size: 18px;
-    margin-right: 30px;
-    width: 50px;
+.about-me__subtitle {
+    display: block;
+    margin-bottom: 8px;
 }
 
 .skills__wrapper {
@@ -449,23 +454,23 @@ section {
     color: #363636;
     font-size: 12px;
 }
+
+
 .page-footer__logo {
-    height: 70px;
-    position: relative;
-}
-.page-footer__logo i {
-    margin-left: 5px;
-    transition: ease-in .35s;
-}
-.page-footer__logo:hover i {
-    right: -27px;
-    transition: ease-in .35s;
-}
-.page-footer__logo img{
-    height: 30px;
-    margin-top: 20px;
+    width: 120px;
+    text-align: left;
 }
 
+.page-footer__logo img{
+    margin-top: 20px;
+    max-width: 70px;
+    height: auto;
+}
+
+.page-footer__logo a:hover i {
+    margin-left: 8px;
+    transition: ease-in .35s;
+}
 
 .accordion {
     width: 100%;
