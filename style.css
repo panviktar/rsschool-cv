@@ -3,6 +3,38 @@
 /*--------------------*/
 /*GENERAL STYLE START*/
 /*--------------------*/
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Bold");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Regular");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Light");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Italic");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "FA";
+  src: url("assets/fontAwesome/fa-regular");
+  font-weight: 400;
+}
+
+.fas {
+  font-family: "FA";
+}
+
 html {
   /*line-height: 1.15; !* 1 *!*/
   /*-webkit-text-size-adjust: 100%; !* 2 *!*/
