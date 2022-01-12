@@ -6,38 +6,31 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("assets/fonts/Poppins-Bold");
+  src: url("assets/fonts/Poppins-Bold.ttf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("assets/fonts/Poppins-Regular");
+  src: url("assets/fonts/Poppins-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("assets/fonts/Poppins-Light");
+  src: url("assets/fonts/Poppins-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("assets/fonts/Poppins-Italic");
+  src: url("assets/fonts/Poppins-Italic.ttf");
   font-style: italic;
 }
 
-@font-face {
-  font-family: "FA";
-  src: url("assets/fontAwesome/fa-regular");
-  font-weight: 400;
-}
-
-.fas {
-  font-family: "FA";
+* {
+  box-sizing: border-box;
 }
 
 html {
-  /*line-height: 1.15; !* 1 *!*/
-  /*-webkit-text-size-adjust: 100%; !* 2 *!*/
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,6 +41,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .h1-hidden {
@@ -107,7 +104,7 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
   padding: 0 20px;
   overflow-x: hidden;
   width: 100%;
@@ -128,7 +125,6 @@ header {
   height: 70px;
   line-height: 70px;
   color: #ffffff;
-  margin-bottom: 45px;
   width: 100%;
   -webkit-overflow-x: hidden;
 }
@@ -166,6 +162,7 @@ header {
 .nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
   padding-right: 20px;
   position: relative;
@@ -173,8 +170,7 @@ header {
 }
 
 .navlink {
-  list-style: none;
-  margin: 0 35px 0 0;
+  margin: 0 0 0 15px;
   padding: 0;
 }
 
@@ -183,6 +179,8 @@ header {
   text-decoration: none;
   font-size: 1em;
   line-height: 70px;
+  padding: 0 20px 0 20px;
+  display: inline-block;
 }
 
 .burger {
@@ -230,11 +228,12 @@ main {
 
 .general-info {
   display: flex;
-  margin-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 .about-me {
   display: flex;
-  margin-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .title-h1 {
@@ -292,7 +291,7 @@ main {
 }
 
 .block-wrapper {
-  padding: 0 30px 30px 30px;
+  padding: 0 30px 40px 30px;
 }
 .block-wrapper--top {
   padding-top: 30px;
@@ -330,7 +329,6 @@ main {
   .about-me {
     flex-direction: column;
   }
-
   .about-me__left-column {
     min-width: 100%;
   }
@@ -355,9 +353,32 @@ main {
 .about-me__video a:hover {
   text-decoration: underline;
 }
+.about-me__item {
+  margin-bottom: 30px;
+  position: relative;
+}
 
-.about-me__list hr {
-  opacity: 0.3;
+.about-me__item:after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  content: "";
+  bottom: -14px;
+  left: 0;
+  background: #fff;
+  opacity: 0.2;
+}
+
+.about-me__item:last-child:after {
+  display: none;
+}
+.about-me__item:last-child {
+  margin-bottom: 0;
+}
+.about-me__item a {
+  margin-top: 5px;
+  display: block;
+  font-weight: 300 !important;
 }
 .about-me__item a i {
   color: #e4c54a;
@@ -430,7 +451,7 @@ main {
 /*   */
 /*}*/
 
-.skills__wrapper {
+.skills__list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -449,7 +470,7 @@ main {
   color: #e2e2e2;
 }
 @media screen and (max-width: 720px) {
-  .skills__wrapper {
+  .skills__list {
     text-align: center;
   }
   .skills__item {
@@ -463,7 +484,7 @@ main {
 
 .page-footer {
   background-color: #e6e6e6;
-  height: 70px;
+  min-height: 70px;
   line-height: 70px;
   color: #000;
   text-align: center;
