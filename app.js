@@ -1,3 +1,4 @@
+
 const burger = document.querySelector("#burger");
 const popup = document.querySelector("#popup");
 const menu = document.querySelector("#menu").cloneNode(1);
