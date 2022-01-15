@@ -251,6 +251,7 @@ i {
     justify-content: flex-start;
     z-index: 99;
     position: relative;
+    overflow: auto;
   }
 
   .popup .nav__menu .nav__item {
