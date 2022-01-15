@@ -283,6 +283,54 @@ i {
   }
 }
 
+.navlink {
+  list-style: none;
+  margin: 0 35px 0 0;
+  padding: 0;
+}
+
+.navlink a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 70px;
+}
+
+.burger {
+  font-size: 1.2em;
+  display: none;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 720px) {
+  .burger {
+    display: block;
+  }
+  .nav {
+    margin: 0;
+    background: #343434;
+    position: absolute;
+    right: -100%;
+    top: 70px;
+    width: 50%;
+    height: calc(100% - 70px);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    transition: all 400ms;
+  }
+  .navlink {
+    text-align: center;
+  }
+
+  .nav-active {
+    right: 0;
+  }
+  .burger {
+    margin-right: 50px;
+  }
+}
+
 /*--------------------*/
 /*MAIN START*/
 /*--------------------*/
@@ -404,6 +452,7 @@ main {
     padding: 0 30px 40px 30px;
   }
 }
+
 .block-wrapper--top {
   padding-top: 30px;
 }
@@ -450,6 +499,15 @@ main {
   margin-bottom: 30px;
   position: relative;
 }
+@media screen and (max-width: 720px) {
+  .aboutMe {
+    flex-direction: column;
+  }
+
+  .aboutMe__leftColumn {
+    min-width: 100%;
+  }
+}
 
 .about-me__item:after {
   position: absolute;
@@ -476,6 +534,32 @@ main {
 .about-me__item a i {
   color: #e4c54a;
   font-size: 12px;
+}
+.aboutMe__video {
+  text-align: center;
+}
+.aboutMe__video a {
+  color: #000;
+  /*display: block;*/
+  position: relative;
+}
+.aboutMe__video a:after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0;
+  width: 90%;
+  height: 2px;
+  background: #f2c100;
+  visibility: hidden;
+  transition: ease-in 0.35s;
+}
+
+.aboutMe__video a:hover:after {
+  transition: ease-in 0.15s;
+  bottom: -5px;
+  display: block;
+  visibility: visible;
 }
 
 .about-me__item a:hover i {
@@ -641,6 +725,14 @@ main {
     width: 100%;
   }
 }
+@media screen and (max-width: 720px) {
+  .skills__wrapper {
+    text-align: center;
+  }
+  .skills__item {
+    width: 100%;
+  }
+}
 
 /*--------------------*/
 /*FOOTER START*/
@@ -736,6 +828,170 @@ main {
 .page-footer__logo a:hover i {
   margin-left: 8px;
   transition: ease-in 0.35s;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  min-height: 0;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fefffa;
+  overflow: hidden;
+}
+.accordion h2 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  border-bottom: 1px solid #f2c100;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.msg {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+@media (max-width: 550px) {
+  .accordion {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+
+.accordion ul {
+  list-style: none;
+  /*perspective: 900;*/
+  padding: 0;
+  margin: 0;
+}
+
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.accordion ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 25px;
+}
+
+.accordion ul li i:before,
+.accordion ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  width: 3px;
+  height: 9px;
+}
+.accordion ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+.accordion ul li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.accordion ul li input[type="checkbox"]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.accordion ul li input[type="checkbox"]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion ul li input[type="checkbox"]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+div.msg,
+ul li i:before,
+ul li i:after {
+  transition: all 0.5s ease-in-out;
+}
+
+.accordion .msg img {
+  width: 100%;
+  height: auto;
+  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.msg img .large-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.msg img.img-left {
+  width: 25%;
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+
+.msg img.img-right {
+  width: 25%;
+  float: right;
+  margin: 5px 0 5px 15px;
+}
+.page-footer__logo {
+  height: 70px;
+  position: relative;
+}
+.page-footer__logo i {
+  margin-left: 5px;
+  transition: ease-in 0.35s;
+}
+.page-footer__logo:hover i {
+  right: -27px;
+  transition: ease-in 0.35s;
+}
+.page-footer__logo img {
+  height: 30px;
+  margin-top: 20px;
 }
 
 .accordion {

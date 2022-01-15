@@ -1,7 +1,9 @@
 ## Zdanovich Viktar
 
+
 - Belarus, Hrodna
 - +375298684666
+
 - [panviktar@gmail.com](mailto:panviktar@gmail.com)
 - [Github link](https://github.com/panviktar)
 
@@ -29,7 +31,10 @@
   - Russian / Belarusian - Native
   - English - _A2_
   - Deutch - _A2_
+
   - Polish - _B1_
+=======
+ 
 
 ---
 
