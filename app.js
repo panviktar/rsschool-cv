@@ -1,15 +1,19 @@
-// Selection of HTML objects
-const burger = document.querySelector(".burger i");
-const nav = document.querySelector(".nav");
-
-// Defining a function
-function toggleNav() {
-  burger.classList.toggle("fa-bars");
-  burger.classList.toggle("fa-times");
-  nav.classList.toggle("nav-active");
+const burger = document.querySelector("#burger");
+const popup = document.querySelector("#popup");
+const menu = document.querySelector("#menu").cloneNode(1);
+const body = document.body;
+//
+burger.addEventListener("click", burgerHandler);
+// body.addEventListener("click", burgerHandler);
+//
+function burgerHandler(e) {
+  e.preventDefault();
+  popup.classList.toggle("open");
+  burger.classList.toggle("active");
+  body.classList.toggle("noscroll");
+  renderPopup();
 }
-
-// Calling the function after click event occurs
-burger.addEventListener("click", function () {
-  toggleNav();
-});
+//
+function renderPopup() {
+  popup.appendChild(menu);
+}

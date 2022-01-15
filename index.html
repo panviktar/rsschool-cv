@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CV Viktar Zdanovich</title>
-    <!--    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!--    <link-->
     <!--      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap"-->
@@ -26,20 +26,37 @@
           ></a>
         </div>
         <nav>
-          <ul class="nav">
-            <li class="navlink"><a href="#contact">Contact</a></li>
-            <li class="navlink"><a href="#education">Education</a></li>
-            <li class="navlink"><a href="#project">Project</a></li>
-            <li class="navlink"><a href="#profile">Profile</a></li>
-            <li class="navlink"><a href="#skills">Skills</a></li>
-            <li class="navlink"><a href="#code">Code</a></li>
+          <ul class="nav__menu" id="menu">
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#education">Education</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#project">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#profile">Profile</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#skills">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#code">Code</a>
+            </li>
           </ul>
         </nav>
         <div class="burger">
-          <i class="fas fa-bars"></i>
+          <div class="burger__field" id="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </div>
       </div>
     </header>
+    <div class="popup" id="popup"></div>
 
     <main class="page-main container">
       <section class="general-info">
@@ -47,7 +64,7 @@
           <img src="assets/img/zdanovich.jpg" alt="cv-photo" />
         </figure>
         <div class="general-info__name">
-          <h3 class="title-h1">Zdanovich Viktar</h3>
+          <h3 class="general-info__title">Zdanovich Viktar</h3>
           <p>Web Programmer</p>
         </div>
       </section>
@@ -183,40 +200,59 @@
 
           <section class="about-me__project block-wrapper" id="project">
             <h2 class="about-me__title">Project</h2>
-            <ul class="about-me__list">
-              <li class="about-me__item-project">
-                <a href="http://ocge-grodno.by/" target="_blank">
-                  <span><i class="fas fa-globe"></i> Web site</span>
-                  <div class="image-box">
-                    <img
-                      src="assets/img/cge.png"
-                      alt="Center for Hygiene and Epidemiology"
-                    />
-                  </div>
-                  <span class="about-me__item-project-name"
-                    >Center for Hygiene and Epidemiology
-                    <i class="fas fa-long-arrow-alt-right"></i
-                  ></span>
-                </a>
-              </li>
-              <li class="about-me__item-project">
-                <a
-                  href="https://rolling-scopes-school.github.io/panviktar-JSFE2021Q1/photo-filter/"
-                  target="_blank"
-                >
-                  <span
-                    ><i class="fas fa-project-diagram"></i> HTML / CSS /
-                    JS</span
-                  >
-                  <div class="image-box">
-                    <img src="assets/img/pf.png" alt="Photo-filter" />
-                  </div>
-                  <span class="about-me__item-project-name">
-                    Photo-filter <i class="fas fa-long-arrow-alt-right"></i
-                  ></span>
-                </a>
-              </li>
-            </ul>
+            <div class="about-me__list">
+              <a
+                class="about-me__project-link"
+                href="http://ocge-grodno.by/"
+                target="_blank"
+              >
+                <div class="about-me__project-img image-box">
+                  <img
+                    src="assets/img/web.jpg"
+                    alt="Center for Hygiene and Epidemiology"
+                  />
+                </div>
+                <ul class="about-me__project-info">
+                  <li>
+                    <i class="fas fa-globe"></i> Web site "Center for Hygiene
+                    and Epidemiology"
+                  </li>
+                  <li>
+                    Design, layout, landing on CMS, SEO optimization and search
+                    engine promotion
+                  </li>
+                  <li>#HTML #CSS #JS #Wordpress #CEO</li>
+                  <li class="about-me__item-project-name">
+                    www.ocge-grodno.by
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                  </li>
+                </ul>
+              </a>
+
+              <a
+                class="about-me__project-link"
+                href="https://rolling-scopes-school.github.io/panviktar-JSFE2021Q1/photo-filter/"
+                target="_blank"
+              >
+                <div class="about-me__project-img image-box">
+                  <img src="assets/img/soft.jpg" alt="Photo-filter" />
+                </div>
+                <ul class="about-me__project-info">
+                  <li>
+                    <i class="fas fa-project-diagram"></i> Task on the course rs
+                    "Photo-filter"
+                  </li>
+                  <li>
+                    A photo editor that allows you to edit an image by applying
+                    various properties and filters to them
+                  </li>
+                  <li>#JS #DOM</li>
+                  <li class="about-me__item-project-name">
+                    github.io <i class="fas fa-long-arrow-alt-right"></i>
+                  </li>
+                </ul>
+              </a>
+            </div>
           </section>
 
           <section class="about-me__skills skills block-wrapper" id="skills">
@@ -331,7 +367,7 @@ class Tank {
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <div class="page-footer__copyright">
-          <span>Viktar Zdanovich 2022 <i class="far fa-copyright"></i></span>
+          <span>pan 2022<i class="far fa-copyright"></i></span>
           <ul>
             <li>
               <a href="https://github.com/panviktar"
